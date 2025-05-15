@@ -23,39 +23,7 @@
 
 测试本服务构建无需任何费用，创建服务实例涉及的费用参考服务实例计费说明。
 
-## RAM账号所需权限
-
-本服务需要对ECS、VPC等资源进行访问和创建操作，若您使用RAM用户创建服务实例，需要在创建服务实例前，对使用的RAM用户的账号添加相应资源的权限。添加RAM权限的详细操作，请参见[为RAM用户授权](https://help.aliyun.com/document_detail/121945.html)。
-所需权限如下表所示。
-
-| 权限策略名称                              | 备注                          |
-|-------------------------------------|-----------------------------|
-| AliyunECSFullAccess                 | 管理云服务器服务（ECS）的权限            |
-| AliyunVPCFullAccess                 | 管理专有网络（VPC）的权限              |
-| AliyunROSFullAccess                 | 管理资源编排服务（ROS）的权限            |
-| AliyunRDSFullAccess                 | 管理云数据库服务(RDS)的权限            |
-| AliyunSLBFullAccess                 | 管理负载均衡服务(SLB)的权限            |
-| AliyunCloudMonitorFullAccess        | 管理云监控（CloudMonitor）的权限      |
-| AliyunComputeNestUserFullAccess     | 管理计算巢服务（ComputeNest）的用户侧权限  |
-| AliyunComputeNestSupplierFullAccess | 管理计算巢服务（ComputeNest）的服务商侧权限 |
-
-## 服务实例计费说明
-
-Kodbox在计算巢上的费用主要为FC服务费用，FC的费用详情参见：[FC服务费用说明](https://help.aliyun.com/zh/fc/product-overview/billing-overview)。
-
-预估费用在创建实例时可实时看到。
-
 ## 服务实例部署流程
-
-### 部署参数说明
-
-| 参数组        | 参数项      | 示例            |
-|------------|----------|---------------|
-| 可用区配置      | 可用区      | cn-hangzhou-a |
-| 基础资源配置（必填） | 专有网络实例ID | vpc-xxxx      |
-| 基础资源配置（必填） | 交换机实例ID  | vsw-xxxx      |
-| 基础资源配置（必填） | 安全组ID    | sg-xxxxx      |
-| FC 配置      | 服务名称     | fc-kodbox     |
 
 ### 部署步骤
 整体部署整体分为三个大步骤：部署计算巢服务实例 -> 访问fc控制台触发服务运行 -> 为访问kodbox服务配置自定义域名。配置完域名后即可通过域名访问kodbox。
